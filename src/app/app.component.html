@@ -1,1 +1,15 @@
-<app-game-control (secondPassed)="onSecondPassed($event)"></app-game-control>
+<div class="container">
+  <h1>Odd Even Game</h1>
+  <hr />
+  <div class="row">
+    <app-game-control
+      (secondPassed)="onSecondPassed($event)"
+    ></app-game-control>
+  </div>
+  <div class="row" *ngFor="let round of roundsPlayed">
+    <app-odd
+      *ngIf="round.type() === 'odd'"
+      [numberToRender]="round.number"
+    ></app-odd>
+  </div>
+</div>

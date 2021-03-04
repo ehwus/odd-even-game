@@ -7,9 +7,9 @@ import { Round } from './round.model';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  gamesPlayed: Round[] = [];
+  roundsPlayed: Round[] = [];
 
   onSecondPassed(currentNumber: number) {
-    this.gamesPlayed.push(new Round(currentNumber));
+    this.roundsPlayed.push(new Round(currentNumber));
   }
 }
