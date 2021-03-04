@@ -9,6 +9,7 @@ export class GameControlComponent implements OnInit {
   counter: number = 1;
   gameStarted: boolean = false;
   @Output() secondPassed = new EventEmitter<number>();
+  @Output() gameReset = new EventEmitter();
 
   constructor() {}
 
@@ -30,5 +31,9 @@ export class GameControlComponent implements OnInit {
     this.gameStarted = false;
   }
 
+  resetGame() {
+    this.stopGame();
+    this.gameReset.emit();
+  }
   ngOnInit(): void {}
 }

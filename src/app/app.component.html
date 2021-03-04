@@ -4,6 +4,7 @@
   <div class="row">
     <app-game-control
       (secondPassed)="onSecondPassed($event)"
+      (gameReset)="onGameReset()"
     ></app-game-control>
   </div>
   <div class="row" *ngFor="let round of roundsPlayed">

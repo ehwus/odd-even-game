@@ -12,4 +12,8 @@ export class AppComponent {
   onSecondPassed(currentNumber: number) {
     this.roundsPlayed.push(new Round(currentNumber));
   }
+
+  onGameReset() {
+    this.roundsPlayed = [];
+  }
 }
