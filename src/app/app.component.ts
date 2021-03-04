@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Round } from './round.model';
 
 @Component({
   selector: 'app-root',
@@ -6,7 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  onSecondPassed(currentNumber: Number) {
-    console.log(currentNumber);
+  gamesPlayed: Round[] = [];
+
+  onSecondPassed(currentNumber: number) {
+    this.gamesPlayed.push(new Round(currentNumber));
   }
 }
